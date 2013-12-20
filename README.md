@@ -1,4 +1,4 @@
-# cantata
+# Cantata
 
 Version: 0.1
 
