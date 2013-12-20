@@ -1,0 +1,25 @@
+@mixin size($w, $h) {
+  width:  #{$w}px;
+  height: #{$h}px;
+}
+
+
+
+//****************************************************************************************************
+//
+// .. ICONS
+//
+//****************************************************************************************************
+.ico {
+  display: inline-block;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  &.__19 {
+     @include size(19, 19);
+     background-image: url(/assets/images/icons/ico-19.png);
+     &.__fb {background-position: 0 0;}
+     &.__tw {background-position: -19px 0;}
+     &.__ig {background-position: -38px 0;}
+     &.__vk {background-position: -57px 0;}
+  }
+}

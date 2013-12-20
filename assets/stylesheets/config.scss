@@ -1,0 +1,221 @@
+//****************************************************************************************************
+//
+// .. FONTS
+//
+//****************************************************************************************************
+@font-face {
+  font-family: 'museo_cyrl500';
+  src: url('/assets/fonts/museo_cyrillic-webfont.eot');
+  src: url('/assets/fonts/museo_cyrillic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/museo_cyrillic-webfont.woff') format('woff'),
+  url('/assets/fonts/museo_cyrillic-webfont.ttf') format('truetype'),
+  url('/assets/fonts/museo_cyrillic-webfont.svg#museo_cyrl500') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'museo_sans_cyrl100';
+  src: url('/assets/fonts/museosanscyrl-100-webfont.eot');
+  src: url('/assets/fonts/museosanscyrl-100-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/museosanscyrl-100-webfont.woff') format('woff'),
+       url('/assets/fonts/museosanscyrl-100-webfont.ttf') format('truetype'),
+       url('/assets/fonts/museosanscyrl-100-webfont.svg#museo_sans_cyrl100') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'museo_sans_cyrl300';
+  src: url('/assets/fonts/museosanscyrl-300-webfont.eot');
+  src: url('/assets/fonts/museosanscyrl-300-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/museosanscyrl-300-webfont.woff') format('woff'),
+  url('/assets/fonts/museosanscyrl-300-webfont.ttf') format('truetype'),
+  url('/assets/fonts/museosanscyrl-300-webfont.svg#museo_sans_cyrl300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'museo_sans_cyrl500';
+  src: url('/assets/fonts/museosanscyrl-500-webfont.eot');
+  src: url('/assets/fonts/museosanscyrl-500-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/museosanscyrl-500-webfont.woff') format('woff'),
+  url('/assets/fonts/museosanscyrl-500-webfont.ttf') format('truetype'),
+  url('/assets/fonts/museosanscyrl-500-webfont.svg#museo_sans_cyrl500') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'museo_sans_cyrl700';
+  src: url('/assets/fonts/museosanscyrl-700-webfont.eot');
+  src: url('/assets/fonts/museosanscyrl-700-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/museosanscyrl-700-webfont.woff') format('woff'),
+  url('/assets/fonts/museosanscyrl-700-webfont.ttf') format('truetype'),
+  url('/assets/fonts/museosanscyrl-700-webfont.svg#museo_sans_cyrl700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'museo_cyrl500';
+    src: url('/assets/fonts/museo_cyrillic-webfont.svg#museo_cyrl500') format('svg');
+  }
+  @font-face {
+    font-family: 'museo_sans_cyrl100';
+    src: url('/assets/fonts/museosanscyrl-100-webfont.svg#museo_sans_cyrl300') format('svg');
+  }
+  @font-face {
+    font-family: 'museo_sans_cyrl300';
+    src: url('/assets/fonts/museosanscyrl-300-webfont.svg#museo_sans_cyrl300') format('svg');
+  }
+  @font-face {
+    font-family: 'museo_sans_cyrl500';
+    src: url('/assets/fonts/museosanscyrl-500-webfont.svg#museo_sans_cyrl500') format('svg');
+  }
+  @font-face {
+    font-family: 'museo_sans_cyrl700';
+    src: url('/assets/fonts/museosanscyrl-700-webfont.svg#museo_sans_cyrl700') format('svg');
+  }
+}
+
+
+//****************************************************************************************************
+//
+// .. GRID
+//
+//****************************************************************************************************
+$grid: fixed; // .. fixed / fluid / responsive-auto / responsive-manual
+$grid-width-transition: false; // .. true / false
+
+//
+// .. Fixed
+//
+$grid-fixed-col-qty:    12;
+$grid-fixed-col-width:  60; // .. px
+$grid-fixed-col-gutter: 20; // .. px
+
+//
+// .. Responsive
+//
+$grid-responsive-col-gutter: 2; // .. %
+$grid-responsive-col-indent: 2rem; // .. rem / px
+
+//
+// .. Responsive auto
+//
+$grid-responsive-auto-col-qty: 12; // .. 8 / 12
+
+//
+// .. Variables
+// .. desktop / tablet / phone
+//
+$root-font-size-list: (62.5%, 62.5%, 62.5%);
+$ctn-width-list: (80%, 80%, 80%);
+$min-width-list: (940px, 620px, 300px); 
+$max-width-list: (1180px, 940px, 620px);
+  
+
+
+//****************************************************************************************************
+//
+// .. STYLES
+//
+//****************************************************************************************************
+//
+// .. Colors
+//
+$major-color: #554f4b;
+$minor-color: #77a884;
+
+//
+// .. Fonts
+//
+$font-family-serif:    "museo_cyrl500", Times, "Times New Roman", serif;
+$font-family-sans-100: "museo_sans_cyrl100", Helvetica, Arial, sans-serif;
+$font-family-sans-300: "museo_sans_cyrl300", Helvetica, Arial, sans-serif;
+$font-family-sans-500: "museo_sans_cyrl500", Helvetica, Arial, sans-serif;
+$font-family-sans-700: "museo_sans_cyrl700", Helvetica, Arial, sans-serif;
+
+//
+// .. Body
+//
+$base-bg: #e7f0e9;
+$base-color: $major-color;
+$base-font-family: $font-family-sans-500;
+$base-font-size-list: (1.4rem, 1.4rem, 1.4rem);
+$base-font-weight: 400;
+$base-line-height-list: (20px, 20px, 20px);
+
+//
+// .. Headings
+//
+$h-font-family: $font-family-sans-300;
+
+$h1-font-size-list: (30px, 30px, 30px);
+$h2-font-size-list: (24px, 25px, 24px);
+$h3-font-size-list: (2.5rem, 2.5rem, 2.5rem);
+$h4-font-size-list: (2rem, 2rem, 2rem);
+$h5-font-size-list: (inherit, inherit, inherit);
+$h6-font-size-list: (inherit, inherit, inherit);
+
+$h1-font-weight-list: (300, 300, 300);
+$h2-font-weight-list: (300, 300, 300);
+$h3-font-weight-list: (300, 300, 300);
+$h4-font-weight-list: (300, 300, 300);
+$h5-font-weight-list: (300, 300, 300);
+$h6-font-weight-list: (inherit, inherit, inherit);
+
+$h1-line-height-list: (38px, 38px, 38px);
+$h2-line-height-list: (30px, 30px, 30px);
+$h3-line-height-list: (1.25, 1.25, 1.25);
+$h4-line-height-list: (1.375, 1.375, 1.375);
+$h5-line-height-list: (inherit, inherit, inherit);
+$h6-line-height-list: (inherit, inherit, inherit);
+
+//
+// .. Focus
+//
+%focus-style {box-shadow: 0 0 .1rem .1rem rgba(41, 128, 185, .66);}
+$focus: false; // .. true / false
+
+//
+// .. Links
+//
+$link-color: inherit;
+$link-color-hover: $minor-color;
+$link-color-active: $minor-color;
+$link-style: nn;        // .. nn / uu / un / nu
+$link-style-pseudo: uu; // .. nn / uu / un
+
+//
+// .. Forms
+//
+$form-el-bg: #fff;
+$form-el-border-color: $major-color;
+$form-el-border: 1px solid $form-el-border-color;
+$form-el-border-radius: none;
+$form-el-color: $base-color;
+$form-el-color-required: #f90;
+$form-el-color-valid-true: #008000;
+$form-el-color-valid-false: #f00;
+$form-el-font-size: inherit;
+$form-el-line-height: inherit;
+$form-el-padding: 10px 0 9px;
+$form-btn-padding: .3rem 1.2rem;
+
+//
+// .. Content styles
+//
+$content-factor: 2;
+$content-link: false; // .. true / false
+$content-link-color: #0000cd;
+$content-link-color-hover: #ccc;
+$content-link-color-active: darken($content-link-color-hover, 10%);
+
+
+
+//****************************************************************************************************
+//
+// .. COMPONENTS
+//
+//****************************************************************************************************
+$components: true; // .. true / false

@@ -1,0 +1,112 @@
+%main#main.main{role: "main"}
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      .p-b_22
+        = haml '/views/common/_products_nav'.to_sym
+
+  %section.section.__advice.m-b_4{role: "region"}
+    .ctn
+      .grid
+        .grid-i.__grid-8
+          .slider
+            .slides{data: {cycle_fx: "scrollVert"}}
+              - 1.upto(2) do
+                .slide
+                  %a{href: "/blog_show#1"}
+                    %img{src: "/assets/images/advice/img_01_a.png", class: "va-t", alt: "", width: 620, height: 420}
+            .slider_pager
+        .grid-i.__grid-4
+          %figure.tips
+            %a{href: "/blog_show#2", class: "double-hover"}
+              %img{src: "/assets/images/advice/img_01_b.png", class: "va-t", alt: "", width: 300, height: 220}
+            %figcaption.tips_caption
+              %a{href: "/blog_show#2", class: "double-hover"}
+                %p.tx.__xxl Как правильно заваривать молочный улун и&nbsp;насыщать его настоящий вкус?
+              %p.tx.__xxl Советы экспертов.
+              %a{href: "#", class: "tips_caption_next"}
+                Следующий совет
+                %i.fa.fa-chevron-right
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      .p-t_5.p-b_4
+        %p.beta.tx.__center.m-b_4
+          Выбирая чай или кофе, первое, о&nbsp;чем вы&nbsp;должны
+          %br
+          задуматься, это&nbsp;&mdash; качество.
+        .grid
+          .grid-i.__grid-4
+            %figure
+              %a{href: "/assets/images/certificate/photo_01.jpg", data: {lightbox: "certificate"}}
+                %img{src: "/assets/images/certificate/thumb_01.png", alt: "", width: 299, height: 227}
+          .grid-i.__grid-4
+            %figure
+              %a{href: "/assets/images/certificate/photo_02.jpg", data: {lightbox: "certificate"}}
+                %img{src: "/assets/images/certificate/thumb_02.png", alt: "", width: 300, height: 232}
+          .grid-i.__grid-4
+            %figure
+              %a{href: "/assets/images/certificate/photo_03.jpg", data: {lightbox: "certificate"}}
+                %img{src: "/assets/images/certificate/thumb_03.png", alt: "", width: 300, height: 230}
+
+  %section.section{role: "region"}
+    .ctn
+      .p-t_6.p-b_6
+        .grid-i.__grid-8.b-center
+          %article.cnt.tx.__center
+            %p.tx.__xxl Большая часть продукции производится специально для нашей компании и&nbsp;не&nbsp;представлена в&nbsp;других торговых сетях. Мы&nbsp;работаем только с&nbsp;надежными европейскими поставщиками.
+
+  %section.section.__bg.m-b_4{role: "region"}
+    .ctn
+      .p-t_5.p-b_4
+        .m-b_5
+          %p.alpha.tx.__center.m-b_5
+            %a{href: "/catalog"} Популярное
+          .grid
+            - 1.upto(3) do
+              .grid-i.__grid-4
+                = haml '/views/common/_products_item'.to_sym
+        %p.alpha.tx.__center.m-b_5
+          %a{href: "/catalog"} Рекомендуем попробовать
+        .grid
+          - 1.upto(3) do
+            .grid-i.__grid-4
+              = haml '/views/common/_products_item'.to_sym
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      .p-b_4.p-t_4
+        .grid
+          .grid-i.__grid-8
+            %img{src: "/assets/images/chocolate.png", class: "va-t", alt: "", width: 620, height: 350}
+          .grid-i.__grid-4
+            %aside.aside
+              %figure.chocolate
+                %p Производство шоколада ручной работы для наших гостей.
+
+  %section.section{role: "region"}
+    .ctn
+      .p-t_6.p-b_6
+        .grid
+          .grid-i.__grid-3
+            %p.tx.__xxxl.__serif Кофейная Кантата
+            %p.tx.__xxxl.__serif Мелодия вашего вкуса.
+          .grid-i.__grid-8.__prefix-1
+            %article
+              %p.tx.__xxl.m-b_2 Теперь делать покупки вашего любимого чая и&nbsp;кофе стало&nbsp;легко&nbsp;и&nbsp;просто!
+              %p Интернет-магазин &laquo;Кофейная Кантата&raquo; позволит быстро и&nbsp;удобно приобретать качественную продукцию. В&nbsp;интернет-магазине вы&nbsp;сможете подобрать для себя чай, чаеподобные напитки из&nbsp;Германии и&nbsp;Китая, высококачественный кофе различных сортов из&nbsp;Бельгии. Удовольствие от&nbsp;любимого напитка дополнит разнообразие аксессуаров. Вы&nbsp;и&nbsp;ваши близкие достойны совершенства.
+              %p Не&nbsp;отказывайте себе в&nbsp;этом удовольствии.
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      .p-t_5.p-b_4
+        %p.alpha.tx.__center.m-b_5
+          %a{href: "/catalog"} Подарочные наборы
+        .grid
+          - 1.upto(3) do
+            .grid-i.__grid-4
+              = haml '/views/common/_products_item'.to_sym
+
+%footer#footer.footer.__home{role: "contentinfo"}
+  .ctn
+    = haml '/views/layouts/_footer'.to_sym

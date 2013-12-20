@@ -1,0 +1,71 @@
+%main#main.main{role: "main"}
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      = haml '/views/common/_products_nav'.to_sym
+      .p-t_2.p-b_4
+        = haml '/views/common/_products_filter'.to_sym
+
+  %section.section.__bg.__bordered{role: "region"}
+    .ctn
+      .p-t_4.p-b_4
+        .grid
+          .grid-i.__grid-7
+            %img{src: "/assets/images/fake/photo_1.png", class: "va-t", alt: "Кофе растворимый Бразилия", width: 540, height: 400}
+          .grid-i.__grid-5
+            %aside.aside
+              %h2 Кофе растворимый
+              %h2 Бразилия
+
+  %section.section.__bg.m-b_4{role: "region"}
+    .ctn
+      .p-t_4.p-b_6
+        .grid
+          .grid-i.__grid-7
+            %p.tx.__xl.m-b_3
+              %b Коментарии&nbsp;
+              (23)
+            .comments
+              .comments_i
+                .comments_i_user
+                  %img{src: "/assets/images/blank.gif", class: "va-t round c-bg __blue", alt: "", with: 50, height: 50}
+                .comments_i_msg
+                  %form
+                    %input{type: "text", class: "comments_i_msg_add", placeholder: "Введите текст комментария"}
+              %hr.m-t_1.m-b_1
+              .grid
+                - 1.upto(3) do
+                  .grid-i.__grid-7
+                    .comments_i
+                      .comments_i_user
+                        %img{src: "/assets/images/blank.gif", class: "va-t round c-bg __green", alt: "", with: 50, height: 50}
+                      .comments_i_msg
+                        %p
+                          %b Владимир Головин
+                        %p Отличный кофе, просто тащусь.
+          .grid-i.__grid-5
+            %aside.aside
+              %p.tx.__xl.m-b_3
+                %b Состав подарка:
+              .grid
+                - 1.upto(4) do |i|
+                  .grid-i.__grid-1
+                    %img{src: "/assets/images/fake/thumb_#{i}.png", class: "va-t", alt: "", with: 60, height: 60}
+                  .grid-i.__grid-3
+                    %p Кофейное зерно в&nbsp;шоколаде
+                    %p &laquo;Ирландский крем&raquo;
+                    %p 1&nbsp;шт.
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      .p-t_5.p-b_4
+        %p.alpha.tx.__center.m-b_5
+          %a{href: "/catalog"} Придётся по вкусу
+        .grid
+          - 1.upto(3) do
+            .grid-i.__grid-4
+              = haml '/views/common/_products_item'.to_sym
+
+%footer#footer.footer.__home{role: "contentinfo"}
+  .ctn
+    = haml '/views/layouts/_footer'.to_sym

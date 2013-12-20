@@ -1,0 +1,27 @@
+%main#main.main{role: "main"}
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      = haml '/views/common/_products_nav'.to_sym
+      .p-t_2.p-b_4
+        = haml '/views/common/_products_filter'.to_sym
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      .grid
+        - 1.upto(12) do
+          .grid-i.__grid-4
+            = haml '/views/common/_products_item'.to_sym
+      .p-t_5.p-b_5
+        = haml '/views/common/_pagination'.to_sym
+
+  %section.section{role: "region"}
+    .ctn
+      .p-t_8.p-b_8
+        .grid-i.__grid-10.b-center
+          %article.tx.__center
+            %p Именно в&nbsp;этот день, а&nbsp;именно 16&nbsp;декабря 1773&nbsp;года, произошло знаменитое &laquo;Бостонское чаепитие&raquo; (Boston Tea&nbsp;Party). С&nbsp;того времени прошло ни&nbsp;много, ни&nbsp;мало 240&nbsp;лет, но&nbsp;до&nbsp;сих пор это событие остается ярким моментом во&nbsp;Всемирной Истории чая.
+
+%footer#footer.footer{role: "contentinfo"}
+  .ctn
+    = haml '/views/layouts/_footer'.to_sym
