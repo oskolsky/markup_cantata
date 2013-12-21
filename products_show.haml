@@ -25,24 +25,7 @@
             %p.tx.__xl.m-b_3
               %b Коментарии&nbsp;
               (23)
-            .comments
-              .comments_i
-                .comments_i_user
-                  %img{src: "/assets/images/blank.gif", class: "va-t round c-bg __blue", alt: "", with: 50, height: 50}
-                .comments_i_msg
-                  %form
-                    %input{type: "text", class: "comments_i_msg_add", placeholder: "Введите текст комментария"}
-              %hr.m-t_1.m-b_1
-              .grid
-                - 1.upto(3) do
-                  .grid-i.__grid-7
-                    .comments_i
-                      .comments_i_user
-                        %img{src: "/assets/images/blank.gif", class: "va-t round c-bg __green", alt: "", with: 50, height: 50}
-                      .comments_i_msg
-                        %p
-                          %b Владимир Головин
-                        %p Отличный кофе, просто тащусь.
+            = haml '/views/common/_comments'.to_sym
           .grid-i.__grid-5
             %aside.aside
               %p.tx.__xl.m-b_3

@@ -134,12 +134,11 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {font-fam
     @if $grid == "fluid" { &.__cols-#{$i} { @include prefixes(column-count, $i);} }
   }
 
-  &.__black  {color: black;}
-  &.__gray   {color: gray;}
-  &.__silver {color: silver;}
-  &.__white  {color: white;}
+  &.__major  {color: $major-color;}
+  &.__minor  {color: $minor-color;}
 
   &.__serif {font-family: $font-family-serif;}
+  &.__sans-300 {font-family: $font-family-sans-300;}
 
   &.__s   {
     font-size: 13px;

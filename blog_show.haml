@@ -1,0 +1,43 @@
+%main#main.main{role: "main"}
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      .p-t_1.p-b_2
+        %h1.tx.__center Блог
+      .p-b_4
+        = haml '/views/common/_filter_blog'.to_sym
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      %article.post.__show.p-t_4.p-b_6
+        .grid
+          .grid-i.__grid-8.__prefix-2
+            %header
+              %h1.tx.__minor Кофе растворимый Бразилия и&nbsp;его настоящий вкус
+              .post_summary.p-t_1.p-b_1
+                .post_summary_user
+                  %img{src: "/assets/images/blank.gif", class: "va-t round c-bg __blue", alt: "", with: 36, height: 36}
+                .post_summary_info.__s
+                  %p
+                    %b Дмитрий Янов
+                    &nbsp;/&nbsp;
+                    %span.tx.__s 31 октября 2013
+            .cnt.m-b_4
+              .m-b_4
+                %img{src: "/assets/images/fake/blog_1.jpg", class: "va-t", alt: "Кофе растворимый Бразилия и его настоящий вкус", width: "100%"}
+              %p Чай в&nbsp;Китае относят к&nbsp;&laquo;семи вещам, потребным ежедневно&raquo; вместе с&nbsp;дровами, рисом, маслом, солью, соевым соусом и&nbsp;уксусом (柴,米,油,鹽,醬,醋,茶). Китайская чайная культура отличается от&nbsp;европейской, британской и&nbsp;японской как способами приготовления и&nbsp;питья, так и&nbsp;поводами для чаепития. Чай в&nbsp;Китае пьют как в&nbsp;повседневных ситуациях, так и&nbsp;во&nbsp;время официальных мероприятий и&nbsp;ритуалов. Чай здесь&nbsp;&mdash; не&nbsp;только напиток; он&nbsp;играет важную роль в&nbsp;традиционной китайской медицине, китайской кухне и&nbsp;буддизме. Существует также поговорка&nbsp;&mdash; &laquo;茶禅一味&raquo; &mdash; &laquo;Чай и&nbsp;чань одного вкуса&raquo;.
+              %p Вообще говоря, не&nbsp;совсем правильно говорить о&nbsp;&laquo;чайной культуре Китая&raquo; в&nbsp;целом. Те&nbsp;традиции выращивания и&nbsp;употребления чая, которые обычно описываются как &laquo;китайские&raquo;, правильнее было&nbsp;бы именовать &laquo;чайной культурой Центральных равнин Китая&raquo;, в&nbsp;том числе в&nbsp;среднем и&nbsp;нижнем течении Янцзы. Помимо неё, существует во&nbsp;многом оригинальная чайная культура Юго-Западного Китая, обычаи которой распространены в&nbsp;провинциях Юньнань, Гуйчжоу и&nbsp;Сычуань. Эти районы, в&nbsp;которых с&nbsp;древнейших времён выращивался чай, в&nbsp;новое время гораздо менее подвергались влиянию извне и&nbsp;сохранили многие старые чайные традиции, в&nbsp;районах Центрального Китая уже забытые.
+            %footer
+              .m-b_3
+                %img{src: "/assets/images/fake/like.png", alt: ""}
+              %p.tx.__xl.m-b_2
+                %b Коментарии&nbsp;
+                (23)
+              = haml '/views/common/_comments'.to_sym
+          .grid-i.__grid-2
+            .tx.__right
+              %a{href: "/blog_show", class: "post_next"} Следующий пост
+
+%footer#footer.footer.__home{role: "contentinfo"}
+  .ctn
+    = haml '/views/layouts/_footer'.to_sym
