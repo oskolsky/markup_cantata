@@ -138,6 +138,7 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {font-fam
   &.__minor  {color: $minor-color;}
 
   &.__serif {font-family: $font-family-serif;}
+  &.__sans-100 {font-family: $font-family-sans-100;}
   &.__sans-300 {font-family: $font-family-sans-300;}
 
   &.__xs   {

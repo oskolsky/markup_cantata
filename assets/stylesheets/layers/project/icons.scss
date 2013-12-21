@@ -19,6 +19,11 @@
     background-image: url(/assets/images/icons/ico-9.png);
     &.__times {background-position: 0 0;}
   }
+  &.__12 {
+    @include size(12, 12);
+    background-image: url(/assets/images/icons/ico-12.png);
+    &.__times {background-position: 0 0;}
+  }
   &.__19 {
      @include size(19, 19);
      background-image: url(/assets/images/icons/ico-19.png);

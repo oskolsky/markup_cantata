@@ -3,7 +3,7 @@ $(function() {
   
   $('#footer').stickyFooter();
 
-  $('.form_text.__phone').mask('+7 (999) 999-9999');
+  $('.form_text.__phone').mask('+7 (999) 999-99-99');
 
 
 
@@ -16,7 +16,8 @@ $(function() {
 
     var _this = this;
 
-    $(this).click(function() {
+    $(this).find('p a').click(function() {
+      $('.custom-select').find('ul').hide();
       $(this).find('ul').show();
       return false;
     });

@@ -22,9 +22,10 @@
 .p-t_5.p-b_5
   .grid
     .grid-i.__grid-3
-      %form.form.sub-form
-        %input{type: "text", class: "form_text form_el __block sub-form_input", placeholder: "Подпишитесь на рассылку"}
-        %input{type: "submit", class: "sub-form_submit", value: ""}
+      %a{href: "#", class: "sub", data: {dialog: "true", url: "/views/dialogs/subscribe.html"}}
+        Подпишитесь на рассылку
+        &nbsp;
+        %i.fa.fa-chevron-right.tx.__xs.va-m
     .grid-i.__grid-6
       .tx.__center
         %a{href: "/"}

@@ -268,6 +268,7 @@
       background-color: #fff;
       border: 1px solid $base-color;
       border-radius: 3px;
+      color: $base-color;
       padding: 6px 30px 2px 5px;
       width: 140px;
     }
@@ -389,7 +390,13 @@
 
   }
   .bag-item_name {line-height: 20px !important;}
-  .bag-item_remove {padding-right: 40px;}
+  .bag-item_remove {
+    padding-right: 40px;
+    a {
+      opacity: .5;
+      &:hover {opacity: 1;}
+    }
+  }
   .bag-item_price {
     @extend  .bag-item_remove;
     @extend  .bag-item_name;
@@ -461,21 +468,10 @@
 //
 // .. Sub
 //
-.sub-form {
-  position: relative;
+.sub {
+  display: inline-block;
+  padding: 13px 0;
 }
-  .sub-form_input {
-    padding-right: 10px;
-  }
-  .sub-form_submit {
-    color: $base-color;
-    font-family: FontAwesome;
-    font-size: 10px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    @include prefixes(transform, translate(0, -50%));
-  }
 
 //
 // HR
@@ -502,6 +498,21 @@ p > b {font-family: $font-family-sans-700;}
   &:hover {
     border-color: $base-color;
     color: inherit;
+  }
+}
+
+
+
+//****************************************************************************************************
+//
+// .. DIALOGS
+//
+//****************************************************************************************************
+.dialog {
+  background-color: #fff;
+  &.__subscribe {
+    padding: 40px;
+    width: 365px;
   }
 }
 
