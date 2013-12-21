@@ -21,3 +21,6 @@ Thumbs.db
 
 #exe
 *.exe
+
+#Sass
+.sass-cache

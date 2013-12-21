@@ -326,6 +326,14 @@
 }
 
 //
+// .. Post
+//
+.post {&:not(:first-child) {border-top: 1px solid #e4eee6;}}
+  .post_summary {@extend .comments_i;}
+    .post_summary_user {@extend .comments_i_user;}
+    .post_summary_info {@extend .comments_i_msg;}
+
+//
 // HR
 //
 hr {

@@ -1,0 +1,18 @@
+%main#main.main{role: "main"}
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      .p-t_1.p-b_2
+        %h1.tx.__center Блог
+      = haml '/views/common/_filter_blog'.to_sym
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      - 1.upto(3) do
+        = haml '/views/common/_blog_item'.to_sym
+      .p-t_2.p-b_5
+        = haml '/views/common/_pagination'.to_sym
+
+%footer#footer.footer.__home{role: "contentinfo"}
+  .ctn
+    = haml '/views/layouts/_footer'.to_sym
