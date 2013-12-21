@@ -192,7 +192,7 @@ $link-style-pseudo: uu; // .. nn / uu / un
 $form-el-bg: #fff;
 $form-el-border-color: $major-color;
 $form-el-border: 1px solid $form-el-border-color;
-$form-el-border-radius: none;
+$form-el-border-radius: 3px;
 $form-el-color: $base-color;
 $form-el-color-required: #f90;
 $form-el-color-valid-true: #008000;
@@ -200,7 +200,7 @@ $form-el-color-valid-false: #f00;
 $form-el-font-size: inherit;
 $form-el-line-height: inherit;
 $form-el-padding: 10px 0 9px;
-$form-btn-padding: .3rem 1.2rem;
+$form-btn-padding: 0 20px;
 
 //
 // .. Content styles

@@ -1,0 +1,36 @@
+- hash = rand(9999)
+%figure.bag-item{id: "item-#{hash}"}
+  .grid
+    .grid-i.__grid-2
+      .bag-item_photo.tx.__right
+        %a{href: "/products_show##{hash}", class: "double-hover"}
+          %img{src: "/assets/images/fake/bag_#{rand(1..5)}.jpg", class: "va-t", alt: "", width: 80, height: 80}
+    .grid-i.__grid-5
+      .grid
+        .grid-i.__grid-3
+          %p.bag-item_name.tx.__xl
+            %a{href: "/products_show##{hash}", class: "double-hover"} Глаз золотого дракона (EU)
+          %p
+            %span.format-number 250
+            &nbsp;р. / 100 гр.
+        .grid-i.__grid-2
+          .bag-item_remove.tx.__right
+            %a{href: "#", class: "js-bag-item-remove", rel: "#{hash}"}
+              %i.ico.__9.__times
+        .grid-i.__grid-3.va-m
+          .custom-select
+            %p
+              %a{href: "#"} 1 шт.
+            %ul
+              %li
+                %a{href: "#", data: {value: "1"}} 1 шт.
+              %li
+                %a{href: "#", data: {value: "2"}} 2 шт.
+              %li
+                %a{href: "#", data: {value: "3"}} 3 шт.
+            %input{type: "hidden", name: "", value: "1"}
+        .grid-i.__grid-2.va-m
+          %p.bag-item_price.tx.__right.__xl
+            %span.format-number= rand(50..1100)
+            &nbsp;р.
+  %hr.hr.__color.m-t_2.m-b_2

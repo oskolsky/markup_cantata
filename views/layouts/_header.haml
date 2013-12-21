@@ -11,7 +11,11 @@
           %form.form
             %input{type: "text", class: "form_text __s form_el __block", placeholder: "Поиск"}
         .grid-i.__grid-3
-          %p.tx.__s.__right Корзина:  0 руб.
+          %p.tx.__s.__right
+            %a{href: "/bag", class: "a-underline"}
+              Корзина:&nbsp;
+              %span.format-number= rand(1000..5000)
+              &nbsp;руб.
 
   %section.section.__bg{role: "region"}
     .ctn

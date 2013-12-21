@@ -1,0 +1,70 @@
+%main#main.main{role: "main"}
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      .p-t_1.p-b_5
+        %h1.tx.__center
+          Корзина&nbsp;&mdash;&nbsp;
+          %span.format-number 10270
+          &nbsp;р.
+
+  %section.section.__bg.m-b_4{role: "region"}
+    .ctn.p-b_4
+      .grid
+        .grid-i.__grid-7
+          - 1.upto(5) do
+            = haml '/views/common/_bag_item'.to_sym
+          .bag-summary
+            %dl
+              %dt.grid-i.__grid-2.__prefix-2 Промокод:
+              %dd.grid-i.__grid-3
+                .tx.__right
+                  %form.bag-summary_promo
+                    %input{tyle: "text", class: "bag-summary_promo_input"}
+                    %input{type: "submit", class: "bag-summary_promo_submit", value: "", disabled: "disabled"}
+            %dl
+              %dt.grid-i.__grid-2.__prefix-2 Доставка:
+              %dd.grid-i.__grid-3
+                .tx.__right
+                  %span.format-number= rand(500..1500)
+                  &nbsp;р.
+            %dl
+              %dt.grid-i.__grid-2.__prefix-2 Итого:
+              %dd.grid-i.__grid-3
+                .bag-summary_total.tx.__right
+                  %span.format-number= rand(1500..2000)
+                  %span.tx.__xl &nbsp;р.
+        .grid-i.__grid-4
+          %form.form.order-form
+            .p-r.m-b_1{data: {required: "after"}}
+              %input{type: "text", class: "form_text __l form_el __block", placeholder: "Имя"}
+            .p-r.m-b_1{data: {required: "after"}}
+              %input{type: "text", class: "form_text __l __phone form_el __block", placeholder: "Телефон"}
+            .p-r.m-b_2{data: {required: "after"}}
+              %input{type: "text", class: "form_text __l form_el __block", placeholder: "Почта"}
+            %div
+              %label.form_label Адрес
+              %textarea.form_textarea.form_el.__block{rows: 4}
+            .m-b_2
+              %label.form_label Комментарий к заказу
+              %textarea.form_textarea.form_el.__block{rows: 4}
+            .m-b_2
+              %p.tx.__s
+                %i.fa.fa-asterisk.tx.__xs
+                &nbsp;&nbsp;Поля, обязательные к заполнению
+            %div
+              %input{type: "submit", class: "form_button", value: "Оформить заказ"}
+
+  %section.section.__bg{role: "region"}
+    .ctn
+      .p-t_5.p-b_4
+        %p.alpha.tx.__center.m-b_5
+          %a{href: "/catalog"} Возможно вам понравится
+        .grid
+          - 1.upto(3) do
+            .grid-i.__grid-4
+              = haml '/views/common/_products_item'.to_sym
+
+%footer#footer.footer.__home{role: "contentinfo"}
+  .ctn
+    = haml '/views/layouts/_footer'.to_sym

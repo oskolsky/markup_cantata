@@ -238,9 +238,194 @@
 
 //****************************************************************************************************
 //
+// .. ORDER FORM
+//
+//****************************************************************************************************
+.order-form {
+  margin-top: -13px;
+  padding-left: 40px;
+}
+
+
+//****************************************************************************************************
+//
+// .. BAG SUMMARY INFO
+//
+//****************************************************************************************************
+.bag-summary {
+  dl {
+    line-height: 40px;
+    dt {
+
+    }
+    dd {padding-right: 40px;}
+  }
+}
+  .bag-summary_promo {
+    position: relative;
+  }
+    .bag-summary_promo_input {
+      background-color: #fff;
+      border: 1px solid $base-color;
+      border-radius: 3px;
+      padding: 6px 30px 2px 5px;
+      width: 140px;
+    }
+    .bag-summary_promo_submit {
+      background-color: $base-color;
+      background-image: url(/assets/images/icons/ico-24.png);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      border-radius: 0 2px 2px 0;
+      border-left: 1px solid $base-color;
+      cursor: pointer;
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      top: 50%;
+      right: 1px;
+      margin-top: -14px;
+      &[disabled] {
+        background-color: #fff;
+        background-position: -24px 0;
+        cursor: default;
+      }
+    }
+  .bag-summary_total {
+    font-size: 21px;
+  }
+
+
+
+//****************************************************************************************************
+//
+// .. ITEMS
+//
+//****************************************************************************************************
+//
+// .. Comments item
+//
+.comments {
+
+}
+  .comments_i {
+    min-height: 50px;
+    position: relative;
+  }
+    .comments_i_user {
+      position: absolute;
+    }
+    .comments_i_msg {
+      padding-top: 6px;
+      padding-left: 70px;
+    }
+      .comments_i_msg_add {
+        display: block;
+        border: 1px solid #f1f1f1;
+        box-shadow: inset 1px 1px 1px 0 #e2e2e2;
+        color: $base-color;
+        padding: 13px 8px 9px;
+        width: 100%;
+      }
+
+//
+// .. Product item
+//
+.product {
+  font-family: $font-family-sans-300;
+}
+
+//
+// .. Post item
+//
+.post {
+  &:not(:first-child) {border-top: 1px solid #e4eee6;}
+  &.__show {
+    border-top: 1px solid #e4eee6;
+
+    .post_header, .post_header_cnt, .post_footer {padding: 0 40px;}
+
+    .post_summary_info {
+      line-height: 50px;
+      padding-top: 0;
+    }
+  }
+}
+
+  .post_summary {@extend .comments_i;}
+    .post_summary_user {
+      @extend .comments_i_user;
+    }
+    .post_summary_info {
+      @extend .comments_i_msg;
+      &.__s {
+        line-height: 36px !important;
+        padding-left: 50px;
+      }
+    }
+
+  .post_next {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 4px;
+    padding: 5px 10px 3px;
+    &:hover {
+      border-color: $base-color;
+      color: inherit;
+    }
+  }
+
+//
+// .. Bag item
+//
+.bag-item {
+  .hr {
+    margin-left: 60px;
+    width: 440px;
+  }
+}
+  .bag-item_photo {
+
+  }
+  .bag-item_name {line-height: 20px !important;}
+  .bag-item_remove {padding-right: 40px;}
+  .bag-item_price {
+    @extend  .bag-item_remove;
+    @extend  .bag-item_name;
+  }
+
+
+//****************************************************************************************************
+//
 // .. ELEMENTS
 //
 //****************************************************************************************************
+//
+//  .. Custom select
+//
+.custom-select {
+  position: relative;
+  p {
+    a {
+      border-bottom: 1px solid $base-color;
+      display: inline-block;
+    }
+  }
+  ul {
+    display: none;
+    background-color: #fff;
+    border: 1px solid $base-color;
+    padding: 10px 15px;
+    position: absolute;
+    top: -11px;
+    left: -16px;
+    li {
+
+    }
+  }
+}
+
 //
 // .. Chocolate
 //
@@ -293,82 +478,32 @@
   }
 
 //
-// .. Comments
-//
-.comments {
-
-}
-  .comments_i {
-    min-height: 50px;
-    position: relative;
-  }
-    .comments_i_user {
-      position: absolute;
-    }
-    .comments_i_msg {
-      padding-top: 6px;
-      padding-left: 70px;
-    }
-      .comments_i_msg_add {
-        display: block;
-        border: 1px solid #f1f1f1;
-        box-shadow: inset 1px 1px 1px 0 #e2e2e2;
-        color: $base-color;
-        padding: 13px 8px 9px;
-        width: 100%;
-      }
-
-//
-// .. Product
-//
-.product {
-  font-family: $font-family-sans-300;
-}
-
-//
-// .. Post
-//
-.post {
-  &:not(:first-child) {border-top: 1px solid #e4eee6;}
-  &.__show {
-    border-top: 1px solid #e4eee6;
-
-    .post_header, .post_header_cnt, .post_footer {padding: 0 40px;}
-
-    .post_summary_info {
-      line-height: 50px;
-      padding-top: 0;
-    }
-  }
-}
-
-  .post_summary {@extend .comments_i;}
-    .post_summary_user {
-      @extend .comments_i_user;
-    }
-    .post_summary_info {
-      @extend .comments_i_msg;
-      &.__s {
-        line-height: 36px !important;
-        padding-left: 50px;
-      }
-    }
-
-  .post_next {line-height: 38px;}
-
-//
 // HR
 //
-hr {
+hr.hr {
   background-color: #e8e8e8;
   width: 100%;
   height: 1px;
+  &.__color {background-color: #e4eee6;}
 }
 
 //
 // B
 //
 p > b {font-family: $font-family-sans-700;}
+
+//
+// a underline
+//
+.a-underline {
+  border-bottom: 1px solid transparent;
+  display: inline-block;
+  line-height: 20px;
+  &:hover {
+    border-color: $base-color;
+    color: inherit;
+  }
+}
 
 
 
@@ -388,13 +523,7 @@ p > b {font-family: $font-family-sans-700;}
 }
   .footer_nav {
     a {
-      border-bottom: 1px solid transparent;
-      display: inline-block;
-      line-height: 15px;
       margin: 0 10px;
-      &:hover {
-        border-color: $base-color;
-        color: inherit;
-      }
+      @extend .a-underline;
     }
   }

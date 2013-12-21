@@ -14,6 +14,11 @@
   display: inline-block;
   background-color: transparent;
   background-repeat: no-repeat;
+  &.__9 {
+    @include size(9, 9);
+    background-image: url(/assets/images/icons/ico-9.png);
+    &.__times {background-position: 0 0;}
+  }
   &.__19 {
      @include size(19, 19);
      background-image: url(/assets/images/icons/ico-19.png);
@@ -21,5 +26,11 @@
      &.__tw {background-position: -19px 0;}
      &.__ig {background-position: -38px 0;}
      &.__vk {background-position: -57px 0;}
+  }
+  &.__24 {
+    @include size(24, 24);
+    background-image: url(/assets/images/icons/ico-24.png);
+    &.__check.__white {background-position: 0 0;}
+    &.__check.__color {background-position: -24px 0;}
   }
 }

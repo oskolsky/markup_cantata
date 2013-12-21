@@ -3,6 +3,35 @@ $(function() {
   
   $('#footer').stickyFooter();
 
+  $('.form_text.__phone').mask('+7 (999) 999-9999');
+
+
+
+  //****************************************************************************************************
+  //
+  // .. CUSTOM SELECT
+  //
+  //****************************************************************************************************
+  $('.custom-select').each(function() {
+
+    var _this = this;
+
+    $(this).click(function() {
+      $(this).find('ul').show();
+      return false;
+    });
+
+    $(this).find('ul').find('a').click(function() {
+      var value = $(this).data('value');
+      var text = $(this).text();
+      $(this).closest('ul').hide();
+      $(_this).find('input[type="hidden"]').val(value)
+      $(_this).find('p > a').text(text);
+      return false;
+    });
+
+  });
+
 
 
   //****************************************************************************************************
