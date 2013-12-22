@@ -32,6 +32,7 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
 // .. Button, reset, submit
 //
 .form_button {
+  display: inline-block;
   padding: $form-btn-padding;
   background-color: $base-color;
   color: #fff;
@@ -41,6 +42,7 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
   font-family: $font-family-sans-300;
   font-size: 16px;
   line-height: 40px;
+  text-align: center;
   @include prefixes(box-sizing, border-box);
   &[disabled] {
     background-color: #fff;
@@ -49,6 +51,7 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
   }
 }
 a.form_button {
+  color: #fff;
   text-decoration: none;
   @include prefixes(transition, none);
 }

@@ -105,7 +105,7 @@
   }
     .tips_caption_next {
       border-top: 1px solid #e4eee6;
-      color: $link-color-hover;
+      color: $minor-color;
       display: block;
       height: 59px;
       line-height: 59px;
@@ -175,7 +175,7 @@
       font-size: 24px;
       font-weight: 500;
       line-height: 38px;
-      &.__current {color: $link-color-hover;}
+      &.__current {color: $minor-color;}
     }
     .products_bull {
       font-size: 12px;
@@ -381,6 +381,7 @@
  .custom-select {
    position: relative;
    top: -16px;
+   margin-left: 10px;
  }
  .bag-item_price {
    position: relative;
@@ -419,8 +420,8 @@
 //
 .custom-select {
   border-bottom: 1px solid $base-color;
+  display: inline-block;
   font-family: $font-family-sans-300;
-  margin-left: 10px;
   position: relative;
   width: 70px;
   &.__current {
@@ -459,6 +460,26 @@
         line-height: 30px;
       }
     }
+  }
+}
+
+//
+// .. Order link
+//
+.order-link {
+  color: $minor-color;
+  border-top: 1px solid #e4eee6;
+  display: none;
+  font-family: $font-family-sans-700;
+  font-size: 16px;
+  line-height: 41px;
+  position: relative;
+  i {
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    @include prefixes(transform, translate(0, -50%));
   }
 }
 

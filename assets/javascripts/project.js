@@ -61,7 +61,6 @@ $(function() {
   //****************************************************************************************************
   $('.bag-summary_promo').find('.bag-summary_promo_input').keyup(function() {
     var val = $(this).val();
-    console.log('ok', val);
     if (val != '') {
       $('.bag-summary_promo').find('.bag-summary_promo_submit').removeAttr('disabled');
     } else {
@@ -103,6 +102,19 @@ $(function() {
     if ($('.custom-select').find('ul').is(':visible')) {
       $('.custom-select').find('ul').hide();
     }
+  });
+
+
+
+  //****************************************************************************************************
+  //
+  // .. BAY ITEM
+  //
+  //****************************************************************************************************
+  $('.js-in-bag').click(function() {
+    $(this).hide();
+    $('.js-order-link').css({display: 'block'});
+    return false;
   });
 
 
