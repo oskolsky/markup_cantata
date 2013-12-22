@@ -28,11 +28,17 @@ $(function() {
       var text = $(this).text();
       $(this).closest('ul').hide();
       $(_this).find('input[type="hidden"]').val(value)
-      $(_this).find('p > a').text(text);
+      $(_this).find('p > a > span').text(text);
       $(_this).removeClass('__current');
       return false;
     });
 
+  });
+
+  $(document).click(function() {
+    if ($('.custom-select').find('ul').is(':visible')) {
+      $('.custom-select').find('ul').hide();
+    }
   });
 
 
