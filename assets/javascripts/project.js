@@ -18,7 +18,8 @@ $(function() {
 
     $(this).find('p a').click(function() {
       $('.custom-select').find('ul').hide();
-      $(this).find('ul').show();
+      $(_this).find('ul').show();
+      $(_this).addClass('__current');
       return false;
     });
 
@@ -28,6 +29,7 @@ $(function() {
       $(this).closest('ul').hide();
       $(_this).find('input[type="hidden"]').val(value)
       $(_this).find('p > a').text(text);
+      $(_this).removeClass('__current');
       return false;
     });
 
