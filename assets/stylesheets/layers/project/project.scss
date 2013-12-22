@@ -330,13 +330,6 @@
       }
 
 //
-// .. Product item
-//
-.product {
-  font-family: $font-family-sans-300;
-}
-
-//
 // .. Post item
 //
 .post {
@@ -426,6 +419,7 @@
 //
 .custom-select {
   border-bottom: 1px solid $base-color;
+  font-family: $font-family-sans-300;
   margin-left: 10px;
   position: relative;
   width: 70px;
@@ -452,10 +446,10 @@
     display: none;
     background-color: #fff;
     border: 1px solid $base-color;
-    padding: 6px 15px;
+    padding: 6px 14px;
     position: absolute;
     top: -7px;
-    left: -16px;
+    left: -15px;
     width: 100px;
     @include prefixes(box-sizing, border-box);
     li {
