@@ -12,14 +12,44 @@ $(function() {
   // .. ORDER VALIDATION
   //
   //****************************************************************************************************
+  setInterval(function() {
+    var data = {
+      name: $('.order-form').find('.form_text[data-name="name"]'),
+      phone: $('.order-form').find('.form_text[data-name="phone"]')
+    };
+    var $el = $('.order-form').find('.form_button');
+    data.name.val() != '' && data.phone.val() != '' ? $el.removeAttr('disabled') : $el.attr('disabled', 'disabled');
+  }, 1);
+
+
+
+  //****************************************************************************************************
+  //
+  // .. SUBSCRIBE
+  //
+  //****************************************************************************************************
+  $(document).on('focus', '.subscribe-form .form_text[data-name="name"], .subscribe-form .form_text[data-name="email"]', function() {
+    var default_val = $(this).data('value');
+    var val = $(this).val();
+    if (default_val == val) {
+      $(this).val('');
+    }
+  });
+  $(document).on('focusout', '.subscribe-form .form_text[data-name="name"], .subscribe-form .form_text[data-name="email"]', function() {
+    var default_val = $(this).data('value');
+    var val = $(this).val();
+    if (val == '') {
+      $(this).val(default_val);
+    }
+  });
   // Validation
   setInterval(function() {
     var data = {
-      name: $('.order-form').find('.form_text[data-name="name"]').val(),
-      phone: $('.order-form').find('.form_text[data-name="phone"]').val()
+      name: $('.subscribe-form').find('.form_text[data-name="name"]'),
+      email: $('.subscribe-form').find('.form_text[data-name="email"]')
     };
-    var $el = $('.order-form').find('.form_button');
-    data.name != '' && data.phone != '' ? $el.removeAttr('disabled') : $el.attr('disabled', 'disabled');
+    var $el = $('.subscribe-form').find('.form_button');
+    data.name.val() != data.name.data('value') && data.email.val() != data.email.data('value') && data.name.val() != '' && data.email.val() != '' ? $el.removeAttr('disabled') : $el.attr('disabled', 'disabled');
   }, 1);
 
 

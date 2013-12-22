@@ -1,10 +1,10 @@
 .dialog.__subscribe
   %i.dialog_close.js-dialog_close.ico.__12.__times
   %p.tx.__center.__xl.m-b_2 Рассылка новостей<br>и новинок интернет-магазина
-  %form.form
+  %form.form.subscribe-form
     .m-b_1
-      %input{type: "text", class: "form_text __l form_el __block tx __center", value: "Имя"}
+      %input{type: "text", class: "form_text __l form_el __block tx __center", value: "Имя", data: {name: "name", value: "Имя"}}
     .m-b_3
-      %input{type: "text", class: "form_text __l form_el __block tx __center", value: "Email"}
+      %input{type: "text", class: "form_text __l form_el __block tx __center", value: "Email", data: {name: "email", value: "Email"}}
     .tx.__center
-      %input{type: "submit", class: "form_button __white", value: "Подписаться"}
+      %input{type: "submit", class: "form_button", value: "Подписаться", disabled: "disabled"}
