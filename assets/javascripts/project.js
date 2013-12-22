@@ -121,6 +121,23 @@ $(function() {
 
   //****************************************************************************************************
   //
+  // .. PHOTO GALLERY
+  //
+  //****************************************************************************************************
+  $('.gallery').find('.gallery_thumb_i_a').click(function() {
+    var rel = $(this).attr('rel');
+    $('.gallery').find('.gallery_thumb_i_a.__current').removeClass('__current');
+    $(this).addClass('__current');
+    $('.gallery').find('.gallery_preview').find('img').attr({src: rel});
+    $('.gallery').find('.gallery_preview').find('a').attr({href: rel});
+    $('.gallery').find('.gallery_plus').attr({href: rel});
+    return false;
+  });
+
+
+
+  //****************************************************************************************************
+  //
   // .. DOUBLE HOVER
   //
   //****************************************************************************************************
