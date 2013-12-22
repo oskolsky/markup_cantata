@@ -9,10 +9,18 @@ $(function() {
 
   //****************************************************************************************************
   //
-  // .. ORDER
+  // .. ORDER VALIDATION
   //
   //****************************************************************************************************
-//  $('.order-form').find('')
+  // Validation
+  setInterval(function() {
+    var data = {
+      name: $('.order-form').find('.form_text[data-name="name"]').val(),
+      phone: $('.order-form').find('.form_text[data-name="phone"]').val()
+    };
+    var $el = $('.order-form').find('.form_button');
+    data.name != '' && data.phone != '' ? $el.removeAttr('disabled') : $el.attr('disabled', 'disabled');
+  }, 1);
 
 
 
