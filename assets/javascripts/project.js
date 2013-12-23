@@ -176,9 +176,9 @@ $(function() {
   //****************************************************************************************************
   $('.slider').find('.slides').cycle({
     log: false,
-    speed: 1000,
+    speed: 500,
     swipe: true,
-    timeout: 0,
+    timeout: 4000,
     slides: $(this).find('.slide'),
     pager: '.slider_pager'
   });

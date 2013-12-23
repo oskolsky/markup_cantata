@@ -11,19 +11,19 @@
         .grid-i.__grid-8
           .slider
             .slides{data: {cycle_fx: "scrollVert"}}
-              - 1.upto(2) do
+              - 1.upto(2) do |i|
                 .slide
                   %a{href: "/blog_show#1"}
-                    %img{src: "/assets/images/advice/img_01_a.png", class: "va-t", alt: "", width: 620, height: 420}
+                    %img{src: "/assets/images/advice/img_0#{i}.jpg", class: "va-t", alt: "", width: 620, height: 420}
             .slider_pager
         .grid-i.__grid-4
           %figure.tips
             %a{href: "/blog_show#2", class: "double-hover"}
-              %img{src: "/assets/images/advice/img_01_b.png", class: "va-t", alt: "", width: 300, height: 220}
+              %img{src: "/assets/images/fake/advice_01.png", class: "va-t", alt: "", width: 300, height: 220}
             %figcaption.tips_caption
-              %a{href: "/blog_show#2", class: "double-hover"}
-                %p.tx.__xxl Как правильно заваривать молочный улун и&nbsp;насыщать его настоящий вкус?
-              %p.tx.__xxl Советы экспертов.
+              %p.tx.__xxl
+                %a{href: "/blog_show#2", class: "double-hover"}
+                  Как правильно заваривать молочный улун и&nbsp;насыщать его настоящий вкус? Советы экспертов.
               %a{href: "#", class: "tips_caption_next"}
                 Следующий совет
                 %i.fa.fa-chevron-right
@@ -78,7 +78,7 @@
       .p-b_4.p-t_4
         .grid
           .grid-i.__grid-8
-            %img{src: "/assets/images/chocolate.png", class: "va-t", alt: "", width: 620, height: 350}
+            %iframe{src: "//player.vimeo.com/video/13664547?title=0&amp;byline=0&amp;portrait=0", width: "620", height: "350", frameborder: "0", webkitallowfullscreen: "webkitallowfullscreen", mozallowfullscreen: "mozallowfullscreen", allowfullscreen: "allowfullscreen"}
           .grid-i.__grid-4
             %aside.aside
               %figure.chocolate
@@ -92,7 +92,7 @@
             %p.tx.__xxxl.__serif Кофейная Кантата
             %p.tx.__xxxl.__serif Мелодия вашего вкуса.
           .grid-i.__grid-8.__prefix-1
-            %article
+            %article{style: "padding-top: 6px;"}
               %p.tx.__xxl.m-b_2 Теперь делать покупки вашего любимого чая и&nbsp;кофе стало&nbsp;легко&nbsp;и&nbsp;просто!
               %p Интернет-магазин &laquo;Кофейная Кантата&raquo; позволит быстро и&nbsp;удобно приобретать качественную продукцию. В&nbsp;интернет-магазине вы&nbsp;сможете подобрать для себя чай, чаеподобные напитки из&nbsp;Германии и&nbsp;Китая, высококачественный кофе различных сортов из&nbsp;Бельгии. Удовольствие от&nbsp;любимого напитка дополнит разнообразие аксессуаров. Вы&nbsp;и&nbsp;ваши близкие достойны совершенства.
               %p Не&nbsp;отказывайте себе в&nbsp;этом удовольствии.
