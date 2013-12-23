@@ -1,8 +1,8 @@
 # Cantata
 
-Version: 0.1
+Version: 1.0
 
-Updated: 20/12/2013
+Updated: 23/12/2013
 
 Works with Sword: https://github.com/somu/sword
 

@@ -101,6 +101,7 @@ $(function() {
   $(document).click(function() {
     if ($('.custom-select').find('ul').is(':visible')) {
       $('.custom-select').find('ul').hide();
+      $('.custom-select').removeClass('__current'); 
     }
   });
 

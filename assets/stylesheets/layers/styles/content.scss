@@ -147,9 +147,9 @@
 //
 // .. Headings
 //
-.cnt h1, .cnt h2, .cnt h3, .cnt h4, .cnt h5, .cnt h6 {
-  &:not(:first-child) {margin-top: #{$content-factor * 2}rem;} 
-}
+// .cnt h1, .cnt h2, .cnt h3, .cnt h4, .cnt h5, .cnt h6 {
+//   &:not(:first-child) {margin-top: #{$content-factor * 2}rem;} 
+// }
 
 //
 // .. Figure
