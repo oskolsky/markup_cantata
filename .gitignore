@@ -1,3 +1,6 @@
+# Log file
+*.log
+
 # Eclipse
 .project
 
